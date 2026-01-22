@@ -1,368 +1,473 @@
-# 📘 Databricks 14 Days AI Challenge
+# Databricks 14 Days AI Challenge
+
+# 
 
 **End-to-End Lakehouse, Analytics & ML Training (Day 0 – Day 14)**
 
-## 📌 Overview
+* * *
 
-This repository/document captures my complete learning journey through the **Databricks 14 Days AI Challenge**, organized by **Indian Data Club** in collaboration with **Codebasics**, and sponsored by **Databricks**.
+##   
 
-The objective of this program was to build **strong practical foundations** in:
+## Author
 
-*   Databricks Lakehouse architecture  
+# 
+
+**Name:** Guru Saran Satsangi Peddinti  
+**Program:** BS in Data Science & Applications – IIT Madras  
+**Community:** Indian Data Club  
+**Challenge:** Databricks 14 Days AI Challenge  
+**Duration:** 09 Jan 2026 – 22 Jan 2026  
+**Platform:** Databricks Community Edition
+
+* * *
+
+##   
+
+## About This Document
+
+# 
+
+This document serves as a **comprehensive training log and technical summary** of my work during the **Databricks 14 Days AI Challenge**, organized by **the Indian Data Club**, delivered in collaboration with **Codebasics**, and sponsored by **Databricks**.
+
+The goal of this challenge was to **build real-world, hands-on foundations** in:
+
+*   Databricks Lakehouse Architecture
     
-*   Apache Spark & Delta Lake  
+*   Apache Spark & Delta Lake
     
-*   Data engineering best practices  
+*   Data Engineering pipelines
     
-*   Governance & performance optimization  
+*   Governance, performance, and orchestration
     
-*   SQL analytics & dashboards  
+*   SQL analytics & dashboards
     
-*   Statistical analysis & machine learning  
+*   Statistical analysis & Machine Learning
     
-*   MLflow experiment tracking  
+*   MLflow & AI-powered analytics concepts
     
-*   AI-powered analytics concepts  
+
+All implementations were done using **Databricks Community Edition**, with transparent handling of platform limitations.
+
+##   
+
+## Project Folder Structure
+
+# 
+
+    databricks-14-days-ai-challenge/
+    │
+    ├── Day_0_Ecommerce_Setup.py
+    ├── Day_1_PySpark_Basics.py
+    ├── Day_2_Apache_Spark_Fundamentals.py
+    ├── Day_3_PySpark_Transformations.py
+    ├── Day_4_Delta_Lake_Basics.py
+    ├── Day_5_Delta_Lake_Advanced.py
+    ├── Day_6_Medallion_Architecture.py
+    │
+    ├── Day_7_Bronze_Job.py
+    ├── Day_7_Silver_Job.py
+    ├── Day_7_Gold_Job.py
+    ├── Day_7_Job_Controller.py
+    ├── Day_7_Verify.py
+    │
+    ├── Day_8_Governance.py
+    ├── Day_9_SQL_Analytics.py
+    ├── Day_10_Performance.py
+    ├── Day_11_Statistical_Analysis.py
+    ├── Day_12_MLflow_Basics.py
+    ├── Day_13_Model_Comparison.py
+    ├── Day_14_AI_Powered_Analytics.py
+    │
+    └── README.md  (this document)
     
+
+* * *
 
-All work was performed using **Databricks Community Edition**, with clear handling of platform limitations where applicable.
+##   
 
-## 🧱 Dataset Used
+## Dataset Used
 
-*   **E-commerce Behavior Dataset (2019 – Oct & Nov)  
-    **
-*   Source: Kaggle  
+# 
+
+*   **E-commerce Behavior Dataset (2019 – October & November)**
     
-*   Scale: ~13M+ events  
+*   Source: Kaggle
     
-*   Event types: view, cart, purchase, remove\_from\_cart  
+*   Scale: ~13+ million events
     
+*   Event types: `view`, `cart`, `purchase`, `remove_from_cart`
+    
 
-This dataset was incrementally processed using **Bronze → Silver → Gold** layers.
+This dataset was processed using the **Bronze → Silver → Gold (Medallion) Architecture**.
 
-## 📂 Project Structure (Day-wise)
+* * *
 
-Each day corresponds to a dedicated notebook/script focusing on a specific concept.
+##   
 
-## 🟦 Day 0 – Environment Setup & Data Loading
+## Day-wise Training Summary
 
-**Objective:** Prepare Databricks workspace and ingest raw data.
+# 
 
-**Key Activities:**
+* * *
 
-*   Created Databricks Community Edition account  
-    
-*   Configured Kaggle API credentials  
+###   
+
+### Day 0 – Setup & Data Loading
+
+# 
+
+**Focus:** Environment preparation and ingestion
+
+*   Databricks Community Edition setup
     
-*   Created schemas and volumes  
+*   Kaggle API configuration
     
-*   Downloaded and extracted raw CSV data  
+*   Schema & volume creation
     
-*   Loaded Oct & Nov 2019 data into Spark DataFrames  
+*   Raw CSV download and ingestion
     
 
-**Outcome:  
-**A reproducible, production-style ingestion setup.
+**Outcome:** Reliable, repeatable data loading pipeline.
 
-## 🟦 Day 1 – PySpark Basics
+* * *
 
-**Objective:** Understand Spark DataFrames and basic operations.
+### Day 1 – PySpark Basics
 
-**Key Concepts:**
+# 
 
-*   Spark vs Pandas  
-    
-*   DataFrame creation  
+**Focus:** Spark fundamentals
+
+*   DataFrames vs Pandas
     
-*   Schema inspection  
+*   Basic transformations
     
-*   Filtering and simple transformations  
+*   Schema inspection and filtering
     
 
-**Outcome:  
-**Comfort with basic PySpark syntax and execution model.
+**Outcome:** Comfort with Spark syntax and execution.
 
-## 🟦 Day 2 – Apache Spark Fundamentals
+* * *
 
-**Objective:** Learn Spark’s core abstractions and transformations.
+###   
 
-**Key Concepts:**
+### Day 2 – Apache Spark Fundamentals
 
-*   Spark architecture (driver, executors, DAG)  
-    
-*   Lazy evaluation  
+# 
+
+**Focus:** Spark internals
+
+*   Driver, executors, DAG
     
-*   DataFrames vs RDDs  
+*   Lazy evaluation
     
-*   SQL temporary views  
+*   Spark SQL & temp views
     
 
-**Outcome:  
-**Ability to perform real analytical queries using Spark SQL and DataFrames.
+**Outcome:** Ability to reason about Spark execution.
 
-## 🟦 Day 3 – PySpark Transformations Deep Dive
+* * *
 
-**Objective:** Perform complex data transformations.
+###   
 
-**Key Concepts:**
+### Day 3 – PySpark Transformations
 
-*   Joins (inner, left, right, outer)  
+# 
+
+**Focus:** Advanced transformations
+
+*   Joins (inner, left, right, outer)
     
-*   Window functions (ranking, cumulative counts)  
+*   Window functions
     
-*   Aggregations and pivots  
+*   Aggregations, pivots
     
-*   Feature bucketing and derived columns  
+*   Derived features
     
 
-**Outcome:  
-**Hands-on experience with advanced Spark transformations used in real pipelines.
+**Outcome:** Production-style data transformations.
 
-## 🟦 Day 4 – Delta Lake Basics
+* * *
 
-**Objective:** Introduce Delta Lake and ACID reliability.
+###   
 
-**Key Concepts:**
+### Day 4 – Delta Lake Basics
 
-*   Delta vs Parquet  
-    
-*   ACID transactions  
+# 
+
+**Focus:** Reliable storage
+
+*   Delta vs Parquet
     
-*   Schema enforcement  
+*   ACID transactions
     
-*   Managed tables  
+*   Schema enforcement
     
+
+**Outcome:** Transaction-safe data lake.
 
-**Outcome:  
-**Reliable, transactional data storage using Delta Lake.
+* * *
 
-## 🟦 Day 5 – Delta Lake Advanced
+###   
 
-**Objective:** Work with advanced Delta features.
+### Day 5 – Delta Lake Advanced
 
-**Key Concepts:**
+# 
 
-*   Time Travel  
+**Focus:** Data evolution & optimization
+
+*   Time Travel
     
-*   MERGE (upserts)  
+*   MERGE (upserts)
     
-*   OPTIMIZE and ZORDER  
+*   OPTIMIZE & ZORDER
     
-*   VACUUM for cleanup  
+*   VACUUM
     
+
+**Outcome:** Incremental and performant pipelines.
+
+* * *
 
-**Outcome:  
-**Understanding of how Delta Lake supports incremental and performant pipelines.
+###   
 
-## 🟦 Day 6 – Medallion Architecture
+### Day 6 – Medallion Architecture
 
-**Objective:** Design a production-grade data pipeline.
+# 
 
-**Layers Implemented:**
+**Focus:** Pipeline design
 
-*   **Bronze:** Raw ingestion with audit metadata  
+*   Bronze: raw ingestion
     
-*   **Silver:** Cleaned, deduplicated, validated data  
+*   Silver: cleaned & deduplicated
     
-*   **Gold:** Aggregated, business-ready datasets  
+*   Gold: business aggregates
     
 
-**Outcome:  
-**Clear separation of concerns and scalable pipeline design.
+**Outcome:** Scalable, maintainable data architecture.
 
-## 🟦 Day 7 – Databricks Jobs & Orchestration
+* * *
 
-**Objective:** Automate pipelines using jobs.
+###   
 
-**Key Concepts:**
+### Day 7 – Databricks Jobs & Orchestration
 
-*   Notebook parameters (dbutils.widgets)  
-    
-*   Multi-task job orchestration  
+# 
+
+**Focus:** Automation
+
+*   Notebook parameterization
     
-*   Task dependencies (Bronze → Silver → Gold)  
+*   Multi-task workflows
     
-*   Job controller notebook  
+*   Dependencies (Bronze → Silver → Gold)
     
-*   Error handling and job exits  
+*   Job controller logic
     
 
-**Outcome:  
-**End-to-end automated pipeline execution.
+**Outcome:** Fully automated pipelines.
 
-## 🟦 Day 8 – Unity Catalog & Governance
+* * *
 
-**Objective:** Apply data governance concepts.
+###   
 
-**Key Concepts:**
+### Day 8 – Unity Catalog & Governance
 
-*   Catalog → Schema → Table hierarchy  
-    
-*   Managed vs external tables  
+# 
+
+**Focus:** Data governance
+
+*   Catalog → Schema → Table hierarchy
     
-*   Access control (GRANT / REVOKE)  
+*   Permissions & access control
     
-*   Controlled views  
+*   Controlled views
     
-*   Lineage awareness  
+*   Lineage awareness
     
 
-**Outcome:  
-**Governed, discoverable, and secure data access.
+**Outcome:** Secure and discoverable data platform.
 
-## 🟦 Day 9 – SQL Analytics & Dashboards
+* * *
 
-**Objective:** Perform analytics using SQL.
+###   
 
-**Key Concepts:**
+### Day 9 – SQL Analytics & Dashboards
 
-*   Analytical SQL queries  
-    
-*   Revenue analysis  
+# 
+
+**Focus:** Business analytics
+
+*   Analytical SQL queries
     
-*   Funnels and conversion rates  
+*   Revenue trends
     
-*   Aggregations for dashboards  
+*   Funnels & conversion analysis
     
 
-**Outcome:  
-**Business-focused insights derived directly from Gold tables.
+**Outcome:** Insight generation from Gold data.
 
-## 🟦 Day 10 – Performance Optimization
+* * *
 
-**Objective:** Improve query performance.
+###   
 
-**Key Concepts:**
+### Day 10 – Performance Optimization
 
-*   Query execution plans  
-    
-*   Partitioning strategies  
+# 
+
+**Focus:** Speed & efficiency
+
+*   Query plans
     
-*   OPTIMIZE & ZORDER  
+*   Partitioning
     
-*   Benchmarking  
+*   OPTIMIZE & ZORDER
     
-*   Caching considerations (CE-aware)  
+*   Benchmarking
     
 
-**Outcome:  
-**Ability to reason about and improve Spark performance.
+**Outcome:** Performance-aware Spark usage.
 
-## 🟦 Day 11 – Statistical Analysis & ML Preparation
+* * *
 
-**Objective:** Prepare data for machine learning.
+###   
 
-**Key Concepts:**
+### Day 11 – Statistical Analysis & ML Prep
 
-*   Descriptive statistics  
-    
-*   Hypothesis testing (weekday vs weekend)  
+# 
+
+**Focus:** ML readiness
+
+*   Descriptive statistics
     
-*   Correlation analysis  
+*   Hypothesis testing
     
-*   Feature engineering  
+*   Correlation checks
     
-*   Time-based features  
+*   Feature engineering
     
+
+**Outcome:** Clean, ML-ready datasets.
+
+* * *
 
-**Outcome:  
-**ML-ready feature set derived from clean data.
+###   
 
-## 🟦 Day 12 – MLflow Basics
+### Day 12 – MLflow Basics
 
-**Objective:** Track ML experiments.
+# 
 
-**Key Concepts:**
+**Focus:** Experiment tracking
 
-*   MLflow runs  
+*   MLflow runs
     
-*   Parameter & metric logging  
+*   Parameter & metric logging
     
-*   Model logging  
+*   Model artifacts
     
-*   Handling missing labels (NaN / NULL)  
+*   Handling NULL/NaN labels
     
 
-**Outcome:  
-**Reproducible ML experimentation workflow.
+**Outcome:** Reproducible ML experiments.
 
-## 🟦 Day 13 – Model Comparison & Feature Engineering
+* * *
 
-**Objective:** Compare multiple ML models.
+###   
 
-**Key Concepts:**
+### Day 13 – Model Comparison
 
-*   Linear Regression, Decision Trees, Random Forest  
-    
-*   R² metric comparison  
+# 
+
+**Focus:** Model evaluation
+
+*   Multiple regression models
     
-*   Feature importance  
+*   Metric comparison
     
-*   Spark ML pipelines  
+*   Feature importance
     
-*   Handling NULL labels in Spark ML  
+*   Spark ML pipelines
     
+
+**Outcome:** Informed model selection.
 
-**Outcome:  
-**Model selection based on metrics and data understanding.
+* * *
 
-## 🟦 Day 14 – AI-Powered Analytics (Conceptual + Practical)
+###   
 
-**Objective:** Understand AI’s role in modern analytics.
+### Day 14 – AI-Powered Analytics
 
-**Key Concepts:**
+# 
 
-*   Databricks Genie (NL → SQL concept)  
+**Focus:** AI in analytics
+
+*   Databricks Genie (NL → SQL concept)
     
-*   Mosaic AI overview  
+*   Mosaic AI overview
     
-*   AI-assisted analytics  
+*   AI-assisted analytics
     
-*   Simple classification using Spark ML  
+*   Spark ML–based AI demo
     
-*   MLflow logging for AI workflows  
+*   MLflow logging for AI workflows
     
+
+**Note:** Full GenAI features require paid Databricks workspaces; Community Edition constraints were handled transparently.
 
-**Note:  
-**Full Genie and Mosaic AI features require paid Databricks workspaces; Community Edition limitations were handled transparently.
+**Outcome:** Clear understanding of AI’s role in modern data platforms.
 
-**Outcome:  
-**Clear understanding of how GenAI integrates with governed data platforms.
+* * *
 
-## 🚀 What Comes Next: Capstone Project (Codebasics)
+##   
 
-With the 14-day foundation complete, the next phase is the **Codebasics Capstone Project**, where:
+## Next Phase: Capstone Project (Codebasics)
 
-*   A real-world problem statement will be provided  
+# 
+
+With the 14-day foundation complete, the next step is the **Codebasics Capstone Project**, where:
+
+*   A real-world problem statement will be provided
     
-*   End-to-end data engineering, analytics, and ML will be applied  
+*   End-to-end data engineering, analytics, and ML will be applied
     
-*   Best practices learned here will be consolidated into a production-style project  
+*   Best practices learned here will be consolidated into a production-grade solution
     
+
+This training phase focused on **fundamentals, correctness, and reasoning**, ensuring readiness for the capstone.
 
-This training phase was intentionally focused on **depth, correctness, and fundamentals**, not shortcuts.
+* * *
 
-## 🎯 Key Takeaways
+##   
 
-*   Built a complete **Lakehouse pipeline** from raw data to AI insights  
+## Key Takeaways
+
+# 
+
+*   Built a complete **Lakehouse pipeline** from raw data to AI insights
+    
+*   Learned to debug **real platform and data issues**
+    
+*   Practiced governance, performance, and ML workflows
     
-*   Understood **why** things break, not just how to fix them  
+*   Developed habits aligned with **industry-grade data engineering**
     
-*   Learned to work within **real platform constraints  
-    **
-*   Developed habits aligned with **industry-grade data engineering  
-    **
 
-## 📎 Acknowledgements
+* * *
 
-*   **Databricks** – Platform & learning ecosystem  
+
+
+## Acknowledgements
+
+# 
+
+*   **Databricks** – Platform & ecosystem
     
-*   **Indian Data Club** – Community & challenge organization  
+*   **Indian Data Club** – Community & challenge organization
     
-*   **Codebasics** – Structured learning and capstone phase  
+*   **Codebasics** – Structured learning & capstone phase
     
-
-📌 _This document represents a complete hands-on learning journey from Day 0 to Day 14 and serves as the foundation for the upcoming capstone project._
 
+* * *
 
+_This document represents a complete, hands-on Databricks learning journey from Day 0 to Day 14 and serves as the foundation for the upcoming capstone project._
 
+* * *
